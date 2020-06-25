@@ -18,6 +18,7 @@ import Footer from "./components/Footer";
 import Portafolio from "./components/Portafolio.vue";
 import Login from "@/views/Login.vue";
 import Registro from "@/views/Registro.vue";
+import adopciones from "@/views/adopciones.vue";
 // import HelloWorld from "./components/HelloWorld";
 
 export default {
@@ -29,12 +30,13 @@ export default {
    Footer,
    Portafolio,
    Login,
-   Registro
+   Registro,
+   adopciones
   
   },
 
   data: () => ({
-   componenteActual: 'Portafolio',
+   componenteActual: 'adopciones',
   })
 };
 </script>
