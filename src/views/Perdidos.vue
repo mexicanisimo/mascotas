@@ -18,7 +18,7 @@
     <v-list-item>
     
       <v-list-item-content>
-        <v-list-item-title class="headline text-center font-weight-black  titulos--text"> Adoptame</v-list-item-title>
+        <v-list-item-title class="headline text-center font-weight-black  titulos--text"> SE BUSCA</v-list-item-title>
       </v-list-item-content>
     </v-list-item>
 
@@ -39,7 +39,7 @@
         text
         color="deep-purple accent-4"
       >
-      Adoptar
+      Reclamar
       </v-btn>
       <v-btn
         text

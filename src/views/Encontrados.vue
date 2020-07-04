@@ -1,6 +1,7 @@
 <template>
 
-    <div class="container">
+    <div class="container elevation-2 my-6 ">
+      <h1 class="text-center" > Mascotas encontradas</h1>
     <div class="row">
               <v-col
         v-for="i in mascotas"
@@ -11,35 +12,34 @@
       >
 
   <v-card
-    max-width="344"
-    max-height="430"
+    max-width="370"
+    height="450"
     class="mx-auto"
   >
-    <v-list-item>
-    
-      <v-list-item-content>
-        <v-list-item-title class="headline text-center font-weight-black  titulos--text"> Adoptame</v-list-item-title>
-      </v-list-item-content>
-    </v-list-item>
+   
 
     <v-img
       src="../assets/perrito.jpg"
       height="194"
     ></v-img>
 
-    <v-card-text height="200"> 
-     <v-list-item-subtitle class="text-center font-weight-black  light-blue--text"> Raza:{{i.Raza }} Sexo:{{i.Sexo}}</v-list-item-subtitle>
-          <div class="text-subtitle">Descripción:</div>
-           <div class="text-subtitle2">{{i.Descripcion}}</div>
-            
+    <v-card-text height="300"> 
+      <div class="headline text-center font-weight-black  ">  Encontrado</div>
+  <v-divider class="my-2"></v-divider>
+     <v-list-item-subtitle class="font-weight-black "> Raza:{{i.Raza }} Sexo:{{i.Sexo}}</v-list-item-subtitle>
+     
+          <div class="font-weight-medium  titulos--text"> Lugar donde fue encontrado:{{i.Municipio }} Colonia:{{i.Colonia }} Calles:{{i.Ubicacion}}</div>
+          <v-divider class="my-2"></v-divider>
+          <div class="subtitle font-weight-medium econtrado--text">Descripción: {{i.Descripcion}}</div>
+   
     </v-card-text>
 
     <v-card-actions>
       <v-btn
         text
-        color="deep-purple accent-4"
+        color="deep-purple accent-4" 
       >
-      Adoptar
+      Contactar
       </v-btn>
       <v-btn
         text
@@ -63,7 +63,13 @@
      
      </v-col>
     </div>
-    
+      <div class="text-center">
+    <v-pagination
+      v-model="page"
+      :length="4"
+      circle
+    ></v-pagination>
+  </div>
     </div>
 </template>
 <style>
@@ -77,59 +83,82 @@
 
 <script>
 export default {
+  methods:{
+    
+  },
      data: () => ({
+       total:0,
+       page:0,
+       pages:0,
+       elementoporpagina:6,
         mascotas:[
             {
-                Ubicacion:'Colonial el salvador',
+                Municipio:'Puebla',
+                Colonia:'Colonial el salvador',
+                Ubicacion:'Calle 3 poniente 4 norte',
                 Raza: 'Rotwailer',
                 Especie:'Canino',
                 Sexo:'Hembra',
                 Descripcion:'Responde al nombre de lucy tiene 2 año de edad lleva un collar'
             },
              {
-                Ubicacion:'Colonial el salvador',
+                Municipio:'Puebla',
+                Colonia:'Colonial el salvador',
+                Ubicacion:'Calle 3 poniente 4 norte',
                 Raza: 'Rotwailer',
                 Especie:'Canino',
                 Sexo:'Hembra',
                 Descripcion:'Responde al nombre de lucy tiene 2 año de edad lleva un collar'
             },
              {
-                Ubicacion:'Colonial el salvador',
+                Municipio:'Puebla',
+                Colonia:'Colonial el salvador',
+                Ubicacion:'Calle 3 poniente 4 norte',
                 Raza: 'Rotwailer',
                 Especie:'Canino',
                 Sexo:'Hembra',
                 Descripcion:'Responde al nombre de lucy tiene 2 año de edad lleva un collar'
             },
              {
-                Ubicacion:'Colonial el salvador',
+                Municipio:'Puebla',
+                Colonia:'Colonial el salvador',
+                Ubicacion:'Calle 3 poniente 4 norte',
                 Raza: 'Rotwailer',
                 Especie:'Canino',
                 Sexo:'Hembra',
                 Descripcion:'Responde al nombre de lucy tiene 2 año de edad lleva un collar'
             },
              {
-                Ubicacion:'Colonial el salvador',
+                Municipio:'Puebla',
+                Colonia:'Colonial el salvador',
+                Ubicacion:'Calle 3 poniente 4 norte',
                 Raza: 'Rotwailer',
                 Especie:'Canino',
                 Sexo:'Hembra',
                 Descripcion:'Responde al nombre de lucy tiene 2 año de edad lleva un collar'
             },
              {
-                Ubicacion:'Colonial el salvador',
+                Municipio:'Puebla',
+                Colonia:'Colonial el salvador',
+                Ubicacion:'Calle 3 poniente 4 norte',
                 Raza: 'Rotwailer',
                 Especie:'Canino',
                 Sexo:'Hembra',
                 Descripcion:'Responde al nombre de lucy tiene 2 año de edad lleva un collar'
             },
              {
-                Ubicacion:'Colonial el salvador',
+                Municipio:'Puebla',
+                Colonia:'Colonial el salvador',
+                Ubicacion:'Calle 3 poniente 4 norte',
                 Raza: 'Rotwailer',
                 Especie:'Canino',
                 Sexo:'Hembra',
                 Descripcion:'Responde al nombre de lucy tiene 2 año de edad lleva un collar'
             },
              {
-                Ubicacion:'Colonial el salvador',
+                 Municipio:'Puebla',
+                Colonia:'Colonial el salvador',
+                Ubicacion:'Calle 3 poniente 4 norte',
                 Raza: 'Rotwailer',
                 Especie:'Canino',
                 Sexo:'Hembra',
